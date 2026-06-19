@@ -4,7 +4,7 @@ This repository contains my work for **Project Assignment 2** of the *Industrial
 The assignment covers a wide range of classical and modern control topics, with a strong emphasis on PID controller tuning, system identification, and practical implementation in MATLAB/Simulink.
 
 ## Contents
-- **`Industrial_Control_Assignment2_Solutions.pdf`** – Full report with detailed derivations, explanations, and results (in Persian). All MATLAB code is appended at the end of the PDF.
+- **`HW2_Industrial_Control_Solutions.pdf`** – Full report with detailed derivations, explanations, and results (in Persian). All MATLAB code is appended at the end of the PDF.
 - **MATLAB source codes (`*.m`)** – Separate script files for each question (or section), allowing direct reproduction of simulations and analyses.
 - Additional datasets (e.g., `Ident.mat`, `GrowthData*.csv`) if required by the problems.
 
@@ -33,7 +33,7 @@ The assignment covers a wide range of classical and modern control topics, with 
 ## Course Details
 - **Course:** Industrial Control (25791)  
 - **Instructor:** Behzad Ahi  
-- ** Date:** May 2026 
+- **Date:** May 2026 
 
 ## Author
 - Mohammad Reza Mahdavi
