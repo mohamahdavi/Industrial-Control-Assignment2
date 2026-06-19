@@ -32,7 +32,7 @@ The assignment covers a wide range of classical and modern control topics, with 
 
 ## Course Details
 - **Course:** Industrial Control (25791)  
-- **Instructor:** Behzad Ahi  
+- **Instructor:** Prof. Behzad Ahi  
 - **Date:** May 2026 
 
 ## Author
