@@ -4,7 +4,7 @@ This repository contains my work for **Project Assignment 2** of the *Industrial
 The assignment covers a wide range of classical and modern control topics, with a strong emphasis on PID controller tuning, system identification, and practical implementation in MATLAB/Simulink.
 
 ## Contents
-- **`HW2_Industrial_Control_Solutions.pdf`** – Full report with detailed derivations, explanations, and results (in Persian). All MATLAB code is appended at the end of the PDF.
+- **`HW2_Industrial_Control..pdf`** – Full report with detailed derivations, explanations, and results (in Persian). All MATLAB code is appended at the end of the PDF.
 - **MATLAB source codes (`*.m`)** – Separate script files for each question (or section), allowing direct reproduction of simulations and analyses.
 - Additional datasets (e.g., `Ident.mat`, `GrowthData*.csv`) if required by the problems.
 
@@ -26,7 +26,7 @@ The assignment covers a wide range of classical and modern control topics, with 
 | 12 | Advanced PID Structures | Derivative on output, set‑point weighting, multi‑objective Pareto optimization |
 
 ## How to Use
-1. Open the **PDF** for the full solution walk‑through (Persian).
+1. Open the **PDF** for the full solution walk‑through.
 2. Run the **MATLAB scripts** in the same directory to reproduce the figures and analyses.  
    *Make sure required toolboxes (Control System, Optimization, System Identification, Curve Fitting, etc.) are installed.*
 
