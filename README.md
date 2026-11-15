@@ -1,41 +1,65 @@
-# Industrial Control – Project Assignment 2
+# PID Tuning, System Identification & Multi-Objective Optimization
 
-This repository contains my work for **Project Assignment 2** of the *Industrial Control* course (25791), instructed by **Behzad Ahi**, Electrical Engineering Department, Sharif University of Technology.  
-The assignment covers a wide range of classical and modern control topics, with a strong emphasis on PID controller tuning, system identification, and practical implementation in MATLAB/Simulink.
+[![MATLAB](https://img.shields.io/badge/MATLAB-Simulink-0076a8.svg)](#getting-started)
+[![Report PDF](https://img.shields.io/badge/Report-Technical%20PDF-b31b1b.svg)](HW2_401102637-Mahdavi/HW2_Industrial_Control.pdf)
+[![Course](https://img.shields.io/badge/Course-Industrial%20Control%20(SUT)-1f4e79.svg)](#author)
 
-## Contents
-- **`HW2_Industrial_Control.pdf`** – Full report with detailed derivations, explanations, and results (in Persian). All MATLAB code is appended at the end of the PDF.
-- **MATLAB source codes (`*.m`)** – Separate script files for each question (or section), allowing direct reproduction of simulations and analyses.
-- Additional datasets (e.g., `Ident.mat`, `GrowthData*.csv`) if required by the problems.
+End-to-end industrial control design and system identification suite covering empirical PID tuning rules, experimental model identification, model-order reduction, Simulink anti-windup implementation, and multi-objective Genetic Algorithm (GA) Pareto optimization. Developed for the **Industrial Control** course at **Sharif University of Technology**.
 
-## Problems Covered
+> [!IMPORTANT]
+> **Design Objective:** Bridge classical industrial tuning heuristics with modern identification and multi-objective evolutionary optimization while addressing practical actuator saturation via Simulink anti-windup architectures.
 
-| # | Topic | Key Techniques |
-|---|-------|----------------|
-| 1 | PID Tuning using CHR Method | Step response, tracking, no overshoot vs. 20% overshoot |
-| 2 | Simulating System Response & Model Fitting | Step response of high‑order system; first‑, second‑, and fourth‑order approximations |
-| 3 | Method of Moments for System Identification | Swept‑frequency input, moment calculations, reduced‑order modelling |
-| 4 | Reaction Curve Based PID Tuning | Ziegler‑Nichols & Cohen‑Coon, sensitivity analysis, stability margins, disturbance rejection |
-| 5 | PID Synthesis via Transfer Function Matching | Converting general second‑order controller to standard PID form |
-| 6 | Setpoint Tracking via Pole Placement | Augmented system, Sylvester matrix, ramp disturbance rejection |
-| 7 | Windup and Anti‑Windup | Back‑calculation, conditional integration, Simulink PID block |
-| 8 | MATLAB Identification Toolbox | Using `ident` to estimate transfer functions, goodness‑of‑fit |
-| 9 | Model Order Reduction | Model Reducer app, frequency response comparison |
-| 10 | Curve Fitting Toolbox | Biological growth models (Logistic, Gompertz, Richards, Bertalanffy) |
-| 11 | PID Controller Optimization (GA) | Genetic Algorithm, cost function design, robustness analysis |
-| 12 | Advanced PID Structures | Derivative on output, set‑point weighting, multi‑objective Pareto optimization |
+---
 
-## How to Use
-1. Open the **PDF** for the full solution walk‑through.
-2. Run the **MATLAB scripts** in the same directory to reproduce the figures and analyses.  
-   *Make sure required toolboxes (Control System, Optimization, System Identification, Curve Fitting, etc.) are installed.*
+## Key Components & Technical Highlights
 
-## Course Details
-- **Course:** Industrial Control (25791)  
-- **Instructor:** Prof. Behzad Ahi  
-- **Date:** May 2026 
+| Module | Methods & Artifacts | Key Details |
+| :--- | :--- | :--- |
+| **Classical PID Tuning** | CHR, Ziegler–Nichols & Cohen–Coon | Comparative step-response benchmarking across empirical industrial tuning rules (`Q1.m`–`Q12.m`). |
+| **System Identification** | Method of Moments & Identification Toolbox | Experimental parameter estimation from time-series datasets (`GrowthData1.csv`–`GrowthData4.csv`, `Ident.mat`) saved in `estimated_model.mat`, followed by model-order reduction. |
+| **Industrial PID Structures** | Setpoint Weighting & Derivative-on-Output | Pole-placement setpoint tracking paired with structural modifications to prevent derivative kick and overshoot. |
+| **Actuator Saturation & Anti-Windup** | Simulink Implementation | Closed-loop validation of back-calculation and conditional integration anti-windup schemes in [`PID_antiwindup_simulink.slx`](HW2_401102637-Mahdavi/SimulationFiles/PID_antiwindup_simulink.slx). |
+| **Multi-Objective Optimization** | Genetic Algorithm (Pareto Front) | Trade-off optimization of PID gains balancing tracking speed against control effort (`pareto_results.mat`). |
+
+---
+
+## Scope & Limitations
+
+- **Simulation Environment:** Evaluated in continuous/discrete-time MATLAB scripts (`Q1.m`–`Q12.m`) and Simulink (`PID_antiwindup_simulink.slx`) using provided experimental datasets (`GrowthData1`–`4`).
+- **Baseline Benchmarking:** Classical tuning heuristics serve as baselines to demonstrate the disturbance-rejection and saturation-handling improvements of anti-windup and Pareto-optimal designs.
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/mohamahdavi/Industrial-Control-Assignment2.git
+cd Industrial-Control-Assignment2/HW2_401102637-Mahdavi/SimulationFiles
+
+# Open MATLAB and run the problem scripts Q1.m through Q12.m
+# Open PID_antiwindup_simulink.slx in Simulink for anti-windup simulations
+```
+
+---
+
+## Repository Structure
+
+```text
+.
+├── README.md
+└── HW2_401102637-Mahdavi/
+    ├── HW2_Industrial_Control.pdf        # Compiled technical report
+    └── SimulationFiles/
+        ├── Q1.m ... Q12.m                # MATLAB scripts for tuning, ID, reduction & GA optimization
+        ├── PID_antiwindup_simulink.slx   # Simulink model for actuator saturation & anti-windup
+        ├── GrowthData1.csv ... 4.csv     # Experimental step/growth datasets for system identification
+        ├── Ident.mat                     # Identification workspace data
+        ├── estimated_model.mat           # Identified & reduced-order transfer function models
+        └── pareto_results.mat            # Multi-objective GA Pareto-optimal PID solutions
+```
+
+---
 
 ## Author
-- Mohammad Reza Mahdavi
 
-*Status: Completed*
+- **Mohammadreza Mahdavi** — B.Sc. Student in Electrical Engineering (Control Systems), Sharif University of Technology
