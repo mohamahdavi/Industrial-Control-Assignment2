@@ -62,4 +62,4 @@ cd Industrial-Control-Assignment2/HW2_401102637-Mahdavi/SimulationFiles
 
 ## Author
 
-- **Mohammadreza Mahdavi** — B.Sc. Student in Electrical Engineering (Control Systems), Sharif University of Technology
+- **Mohammad Reza Mahdavi** — B.Sc. Student in Electrical Engineering (Control Systems), Sharif University of Technology
